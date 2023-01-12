@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bqbdp15rvwlu4"]
+
+[ext_resource type="Script" path="res://scenes/character.gd" id="1_d0n4c"]
+[ext_resource type="Texture2D" uid="uid://ddi6pyu4s2p3v" path="res://assets/characters/Alex_16x16.png" id="2_ub6ej"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pfuq5"]
+size = Vector2(13, 22)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_d0n4c")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ub6ej")
+hframes = 24
+vframes = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 5)
+shape = SubResource("RectangleShape2D_pfuq5")
